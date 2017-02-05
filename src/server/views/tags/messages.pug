@@ -1,0 +1,6 @@
+extends ../partials/layout
+block main-content
+    if tag
+        h1 Messages for #{tag.name}
+        each tweet in tag.messages
+            div=tweet.message

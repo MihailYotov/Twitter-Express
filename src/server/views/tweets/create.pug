@@ -1,0 +1,10 @@
+extends ../partials/layout
+block main-content
+    h1 Create Tweet
+    form(method="post" action="/tweet")
+        label(for="message") Message
+        br
+        textarea(name="message" id="message" rows="6", cols="66")=message
+
+        br
+        input(type="submit" value="Create")

@@ -1,0 +1,9 @@
+extends ../partials/layout
+block main-content
+    h1 Single Tweet
+    if tweet
+        div Author: #{tweet.user.username}
+        div Message; #{tweet.message}
+        div
+            each tag in tweet.tags
+                span Tag: #{tag}

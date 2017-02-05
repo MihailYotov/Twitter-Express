@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+    title Hello!
+    link(href="/css/style.css" rel="stylesheet")
+    link(rel="icon" href="favicon.ico")
+    body
+        .menu
+            ul
+                li
+                    a(href="/") Home
+                li
+                    a(href="/tag/all") Tags
+                if (currentUser)
+                    li
+                        a(href="/tweet") Tweet
+                    li.user-info
+                        span#user-span= currentUser.username
+                    li
+                        form#logout-form(method="post" action="/users/logout")
+                            a(href="javascript:document.getElementById('logout-form').submit()") Logout
+                    if currentUser.roles.indexOf('Admin') > -1
+                        li
+                            a(href="/users/all") All Users
+                        li
+                            a(href="/admins/all") All Admins
+                else
+                    li
+                        a(href="/users/register") Register
+                    li
+                        a(href="/users/login") Log In
+            if (globalError)
+                h3= globalError
+            block main-content

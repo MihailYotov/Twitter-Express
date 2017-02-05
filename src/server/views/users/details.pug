@@ -1,0 +1,16 @@
+extends ../partials/layout
+block main-content
+    if user
+        h1 Details for #{user.username}
+        div First Name: #{user.firstName}
+        div Last Name: #{user.lastName}
+        div
+            each role in user.roles
+                span.just-span Roles: #{role}
+        if user.tweets.length
+            div Total messages: #{user.tweets.length}
+            h2 Messagse:
+            each tweet in user.tweets
+                div=tweet.message
+        else
+            div #{user.username} still have no tweets.

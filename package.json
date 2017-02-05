@@ -1,0 +1,29 @@
+{
+  "name": "express-exam",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd src && node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
+    "express-session": "^1.14.2",
+    "mongoose": "^4.6.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-jsx": "^3.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-react": "^6.5.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta6",
+    "standard": "^8.5.0",
+    "stylus": "^0.54.5"
+  }
+}

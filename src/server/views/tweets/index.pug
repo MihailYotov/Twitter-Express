@@ -1,0 +1,7 @@
+extends ../partials/layout
+block main-content
+    h1 Hello and welcome to Twitter.
+    if tweets
+        each tweet in tweets
+            div
+                a(href="tweet/" + tweet.id)=tweet.message

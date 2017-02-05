@@ -1,0 +1,7 @@
+extends ../partials/layout
+block main-content
+    h1 Tags
+    if tags
+        each tag in tags
+            div
+                a(href='./' + tag.name)=tag.name

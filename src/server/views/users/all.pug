@@ -1,0 +1,16 @@
+extends ../partials/layout
+block main-content
+    if users
+        h1 All Users
+        div
+            each user in users
+                div
+                    span.cell-span
+                        a(href='/profile/' + user.username)=user.username
+                    span.cell-span
+                        if user.roles.indexOf('Admin') > -1
+                            a(href="/admins/add/" + user.username) Remove Admin
+                        if user.roles.indexOf('Admin') < 0
+                            a(href="/admins/add/" + user.username) Make Admin
+    else
+        div Still no users.
